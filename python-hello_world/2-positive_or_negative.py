@@ -1,10 +1,13 @@
 import random
 
-number = random.randint(-100, 100)
+def positive_or_negative():
+  number = random.randint(-100, 100)
+  if number > 0:
+    print(f"{number} is positive")
+  elif number == 0:
+    print(f"{number} is zero")
+  else:
+    print(f"{number} is negative")
 
-if number > 0:
-    print(number, "is positive")
-elif number == 0:
-    print(number, "is zero")
-else:
-    print(number, "is negative")
+if __name__ == "__main__":
+  positive_or_negative()
