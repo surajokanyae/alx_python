@@ -1,10 +1,11 @@
 def print_numbers(start, end):
-  """Prints numbers from start to end, separated by ,, followed by a space."""
   for i in range(start, end + 1):
-    print(f"{i:02d}, ", end="")
-
+    if i < 10:
+      formatted_number = f"0{i:02}"
+    else:
+      formatted_number = f"{i:02}"
+    print(formatted_number, end=", ")
   print()
 
+print_numbers(0, 100)
 
-if __name__ == "__main__":
-  print_numbers(0, 100)
