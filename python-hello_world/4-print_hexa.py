@@ -1,8 +1,12 @@
-# let define a fuction hexa
-def hexa():
-  """Prints the numbers from 0 to 98 in hexadecimal format."""
-  for i in range(99):
-    print(i, "=", hex(i))
+def print_hexa(number):
+  """
+  Prints the given number in decimal and in hexadecimal.
 
-if __name__ == "__main__":
-  hexa()
+  Args:
+    number: The number to print.
+  """
+for number in range(0, 99):
+  print("{0:d} = 0x{1:x}".format(number, number))
+
+
+  
