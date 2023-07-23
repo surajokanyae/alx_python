@@ -1,11 +1,14 @@
-def print_numbers(start, end):
-  for i in range(start, end + 1):
-    if i < 10:
-      formatted_number = f"0{i:02}"
-    else:
-      formatted_number = f"{i:02}"
-    print(formatted_number, end=", ")
+def saparate_numbers():
+  """Prints numbers from 0 to 99."""
+  for i in range(100):
+    # Format the number as a two-digit string.
+    number = "{:02d}".format(i)
+    # Print the number, followed by a comma and a space.
+    print(number, end=", ")
+  # Print a newline at the end of the output.
   print()
 
-print_numbers(0, 100)
+
+if __name__ == "__main__":
+  saparate_numbers()
 
