@@ -1,6 +1,17 @@
-from add_0 import add
+def add(a, b):
+    """My addition function
 
-a = 1
-b = 2
+    Args:
+        a: first integer
+        b: second integer
 
-print(f"{a} + {b} = {(a, b)}.format(a=a, b=b, add=add)\n0-add.py doesn't contain: [\"__main__\", \"__name__\"]")
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
+
+
+if __name__ == "__main__":
+    a = 1
+    b = 2
+    print(f"{a} + {b} = {add(a, b)}".format(1, 2))
