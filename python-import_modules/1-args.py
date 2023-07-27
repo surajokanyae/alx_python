@@ -8,7 +8,8 @@ def print_arguments():
     else:
         print(f"{args_number - 1} arguments:")
         for i in range(1, args_number):
-            print(f"{i}: {sys.argv[i - 1]}")
+            if sys.argv[i - 1] != __file__:
+                print(f"{i}: {sys.argv[i - 1]}")
 
 if __name__ == "__main__":
     print_arguments()
