@@ -1,10 +1,10 @@
-def print_a():
+def print_a(a):
     with open("variable_load_2.py", "r") as f:
         source = f.read()
-    variable = a
-    # Extract the variable a from the source code
-    exec(source)
+
+    exec(source, {"a": a})
     print(a)
 
 if __name__ == "__main__":
-    print_a()
+    print_a(89)
+    print_a(-100)
