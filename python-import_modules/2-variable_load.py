@@ -6,6 +6,3 @@ def import_variable(variable_name):
     module = imp.load_source(module_name, "variable_load_2.py")
     variable = getattr(module, variable_name)
     print(variable)
-
-if __name__ == "__main__":
-    import_variable("a")
