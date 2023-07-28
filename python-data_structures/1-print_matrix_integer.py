@@ -14,7 +14,7 @@ def print_matrix_integer(matrix=[[]]):
 
   for row in matrix:
     for item in row:
-      print("{:3}".format(item), end=" ")
+      print("{:3}{:d}".format(" ", item), end=" ")
     print()
 
 
