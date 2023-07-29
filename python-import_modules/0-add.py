@@ -1,6 +1,5 @@
-from add_0 import add
-
-def add(a, b):
+if __name__ == '__main__':
+    from add_0 import add
     """My addition function
 
     Args:
@@ -10,14 +9,6 @@ def add(a, b):
     Returns:
         The return value. a + b
     """
-    return (a + b)
-
-    def add(a, b):
-   
-     return (a - b)
-
-if __name__ == "__main__":
     a = 1
     b = 2
-    print(f"The sum of {a} and {b} is {add(a, b)}" .format(a, b))
-
+    print("{} + {} = {}".format(a, b, add(a, b)))
