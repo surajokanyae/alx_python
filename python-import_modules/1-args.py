@@ -1,14 +1,15 @@
-import sys
-
-def print_arguments():
-    """Prints the number of and the list of its arguments."""
-    args_number = len(sys.argv[1:])
-    print(f"{args_number} arguments:")
-    if args_number == 0:
+if __name__ == '__main__':
+    import sys
+    # let print the number of it argument
+    if (len(sys.argv) - 1) != 1:
+        print("{} arguments".format(len(sys.argv) - 1), end='')
+    else:
+        print("{} argument".format(len(sys.argv) - 1), end='')
+    if len(sys.argv) == 1:
         print(".")
     else:
-        for i in range(1, args_number + 1):
-            print(f"{i}: {sys.argv[i]}")
-
-if __name__ == "__main__":
-    print_arguments()
+        print(":")
+    for count, argument in enumerate(sys.argv):
+        if (count == 0):
+            continue
+        print("{}: {}".format((count), argument))
