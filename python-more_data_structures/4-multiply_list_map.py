@@ -1,5 +1,3 @@
-def multiply_list_map(my_list=[], number=0):
- my_list = [1, 2, 3, 4, 6]
-new_list = multiply_list_map(my_list, 4)
-print(new_list)
-print(my_list)
+#!/usr/bin/python3
+def square_matrix_map(matrix=[]):
+    return(list(map(lambda row: list(map(lambda x: x*x, row)), matrix)))
