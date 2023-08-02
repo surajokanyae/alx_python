@@ -3,7 +3,7 @@
 
 
 class Square:
-    """defines empty class."""
+    
     __init__(self, size)
 
     pass
