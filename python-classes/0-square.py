@@ -6,3 +6,4 @@ class Square:
     def get_size(self):
         return self.__size
 
+pass
