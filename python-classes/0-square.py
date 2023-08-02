@@ -1,8 +1,8 @@
-#!/usr/bin/python3
-"""creates empty class Square"""
-
-
 class Square:
-    """defines empty class."""
 
-    pass
+    def __init__(self, size):
+        self.__size = size
+
+    def get_size(self):
+        return self.__size
+
