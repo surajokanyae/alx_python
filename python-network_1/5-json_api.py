@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""
 Python script to send POST request to http://0.0.0.0:5000/search_user
 with parameter q, if no q given, set q=""
 If the response body is JSON formatted, print [<id>] <name>
