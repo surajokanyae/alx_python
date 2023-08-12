@@ -2,6 +2,9 @@
 """
 Python script to send POST request to given URL with given email as parameter
 """
+import requests
+import sys
+
 if __name__ == "__main__":
     from urllib import request, parse
     from sys import argv
