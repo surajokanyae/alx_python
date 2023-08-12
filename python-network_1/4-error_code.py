@@ -4,6 +4,9 @@ Python script to send request to given URL
 and display body of response, decoded
 also handles urllib.error.HTTPError exception
 """
+import requests
+import sys
+
 if __name__ == "__main__":
     from urllib import request, error
     from sys import argv
