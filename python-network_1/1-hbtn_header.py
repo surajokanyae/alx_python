@@ -2,6 +2,9 @@
 """
 Python script to send request to given URL and display value of X-Request-Id
 """
+import sys
+import request
+
 if __name__ == "__main__":
     from urllib import request
     from sys import argv
