@@ -16,20 +16,12 @@ The module raises the following exceptions:
 
 import requests
 
-url = 'https://alu-intranet.hbtn.io/status'
-
-def main():
-    """Gets the status of the intranet website and prints it to the console."""
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        body = response.content.decode('utf-8')
-        print('Body response:')
-        for key, value in body.items():
-            print(f'    - type: {type(value)}')
-            print(f'    - content: {value}')
-    else:
-        print(f'Get failed: {response.status_code}')
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    import urllib.request as request
+    with request.urlopen('https://intranet.hbtn.io/status') as response:
+        content = response.read()
+        utf8_content = content.decode("UTF-8")
+        print("Body response:")
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(utf8_content))
