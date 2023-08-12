@@ -19,8 +19,8 @@ import requests
 if __name__ == "__main__":
     import urllib.request as request
     with request.urlopen('https://intranet.hbtn.io/status') as response:
-        content = response.read()
+        content = "response.read()"
         print("Body response:")
-        print("\t- type: {}".format(type.string(content)))
+        print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
     
