@@ -16,16 +16,14 @@ The module raises the following exceptions:
 
 import requests
 
-url = 'https://alu-intranet.hbtn.io/status'
-
 def main():
-    """Gets the status of the intranet website and prints it to the console."""
+    url = 'https://alu-intranet.hbtn.io/status'
     response = requests.get(url)
 
     if response.status_code == 200:
         body = response.content.decode('utf-8')
         print('Body response:')
-        for key, value in body.items():
+        for key, value in json.loads(body).items():
             print(f'    - type: {type(value)}')
             print(f'    - content: {value}')
     else:
